@@ -1,0 +1,9 @@
+companyDB
+  - driver: mysql
+    open: root@tcp(production_db:3306)/company
+
+employeeDB
+  - driver: mysql
+    open: root@tcp(production_db:3306)/employee1
+  - driver: mysql
+    open: root@tcp(production_db:3306)/employee2
