@@ -77,7 +77,7 @@ func usage() {
 }
 
 var usagePrefix = `
-Goosees is a wrapper of goose to apply migration for multiple databases.
+Goosees is a wrapper of goose for applying migration to multiple databases.
 
 Usage:
     goosees <conf> <group> <subcommand> [subcommand options]

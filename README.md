@@ -1,4 +1,4 @@
-Goosees is a wrapper of [goose](https://bitbucket.org/liamstask/goose/) to apply migration for multiple databases.
+Goosees is a wrapper of [goose](https://bitbucket.org/liamstask/goose/) for applying migration to multiple databases.
 
 # Usage
 
