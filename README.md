@@ -29,7 +29,7 @@ employeeDB:
 
 ## create
 
-Migration file is created under a directory named group name.
+Migration file is created under a directory which has the same name as group.
 
     $ goosees dev companyDB create CreateCompanies sql
     goosees: companyDB/20160128222309_CreateCompanies.sql
