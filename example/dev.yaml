@@ -1,9 +1,9 @@
 companyDB:
   - driver: mysql
-    open: root@tcp(127.0.0.1:3306)/company
+    open: root@tcp(127.0.0.1:3306)/company?parseTime=true
 
 employeeDB:
   - driver: mysql
-    open: root@tcp(127.0.0.1:3306)/employee1
+    open: root@tcp(127.0.0.1:3306)/employee1?parseTime=true
   - driver: mysql
-    open: root@tcp(127.0.0.1:3306)/employee2
+    open: root@tcp(127.0.0.1:3306)/employee2?parseTime=true

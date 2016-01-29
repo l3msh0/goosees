@@ -6,16 +6,20 @@ Goosees is a wrapper of [goose](https://bitbucket.org/liamstask/goose/) for appl
 # "companyDB" group has one database.
 companyDB:
   - driver: mysql
-    open: root@tcp(127.0.0.1:3306)/company
+    open: root@tcp(127.0.0.1:3306)/company?parseTime=true
 
 # "employeeDB" group has two databases.
 employeeDB:
   - driver: mysql
-    open: root@tcp(127.0.0.1:3306)/employee1
+    open: root@tcp(127.0.0.1:3306)/employee1?parseTime=true
   - driver: mysql
-    open: root@tcp(127.0.0.1:3306)/employee2
+    open: root@tcp(127.0.0.1:3306)/employee2?parseTime=true
 
 ```
+
+* `?parseTime=true` **MUST** be included in `open` string to avoid error at status command. See [goose issue #22](https://bitbucket.org/liamstask/goose/issues/22/scan-error-on-column-index-0-unsupported#comment-15419169)
+
+* So far only `mysql` is available as a value of `driver`.
 
 # Usage
 
@@ -49,6 +53,13 @@ Migration is applied to all databases in a group.
     OK    20160128221551_CreateEmployees.sql
 
 ## status
+
+    $ goosees dev companyDB status
+    goosees: status for environment 'companyDB[0]'
+        Applied At                  Migration
+        =======================================
+        Thu Jan 28 22:10:56 2016 -- 20160128220727_CreateCompanies.sql
+        Thu Jan 28 22:13:44 2016 -- 20160128221155_AddCompanyAddress.sql
 
 ## dbversion
 
